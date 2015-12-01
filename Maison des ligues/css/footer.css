@@ -1,0 +1,12 @@
+footer{
+	margin-top: 20px;
+	background-color: #333;
+	color : #eee;
+	font-size: 12px;
+	padding: 20px;
+}
+
+ul.unstyled{
+	list-style : none;
+	padding: 0;
+}
