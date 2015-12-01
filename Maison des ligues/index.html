@@ -3,19 +3,17 @@
 <html>
 	<head>
     <title> Accueil </title>
-    <link rel="icon" href="../image/logo.ico">
+    <link rel="icon" href="image/logo.ico">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <!--Utilistation de bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <!--utlisation des CSS personnalisé-->
     <link rel="stylesheet" href="css/footer.css">
-    <!--Utilisation des icônes du site font awesome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!--Utilisation des icônes du site ionicons-->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!--Utilisation des icônes personnelles-->
+    <link rel="stylesheet" href="fonts/css/animation.css">
 	</head>
 
   <body>
@@ -24,7 +22,8 @@
       <div class="container">
 
         <a href="#" class="navbar-brand"> La Maison des Ligues </a> <!--La maison des ligues-->
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> <!-- Icone de menu lors du passage en petite fenêtre -->
           <span class ="icon-bar"></span>
           <span class ="icon-bar"></span>
           <span class ="icon-bar"></span>
@@ -34,11 +33,11 @@
 
             <ul class="nav navbar-nav navbar-right">
 
-              <li class="active"> <!--Accueil-->
+              <li class="active"> <!--Accueil -->
                 <a href="#">
-                  <span class="fa fa-home visible-sm-block visible-md-block">
+                  <span class="icon-home visible-sm-block visible-md-block">
                   </span>
-                  <span class="fa fa-home visible-xs-block visible-lg-block">
+                  <span class="icon-home visible-xs-block visible-lg-block">
                     &nbsp;
                     Accueil 
                   </span>
@@ -136,10 +135,10 @@
     </div>
                                             <!--      Partie Contenu       -->
     <div class="container">
-      <div class="row featurette">
+      <div class="row featurette"> <!-- Parti Badminton -->
         <div class="col-md-7">
           <h2 class="featurette-heading">
-            Football. 
+            Badminton. 
             </br>
             <span class="text-muted">Catégorie : sport de balle.</span>
           </h2>
@@ -151,8 +150,10 @@
           <img class="featurette-image img-responsive center-block img-circle" src="image/tennis/maria-sharapova.jpg" alt="Generic placeholder image" width="300" height="300">
         </div>
       </div>
-      <hr class="featurette-divider">
-      <div class="row featurette">
+
+      <hr class="featurette-divider"> <!-- Trait de séparation -->
+
+      <div class="row featurette"> <!-- Parti Tennis -->
         <div class="col-md-7">
           <h2 class="featurette-heading">
             Tennis. 
@@ -167,8 +168,10 @@
          <img class="featurette-image img-responsive center-block img-circle" src="image/tennis/maria-sharapova.jpg" alt="Generic placeholder image" width="300" height="300">
         </div>
       </div>
-      <hr class="featurette-divider">
-      <div class="row featurette">
+
+      <hr class="featurette-divider"> <!-- Trait de séparation -->
+
+      <div class="row featurette" ><!-- Parti Volleyball -->
         <div class="col-md-7">
           <h2 class="featurette-heading">
             Voleyball. 
@@ -187,7 +190,20 @@
                                             <!--      Partie Footer       -->
     <footer>
       <div class="container">
-        <div class="row">
+        <div class="row"> <!-- Ligne Réseau Sociaux -->
+          <div class="center">
+            <h3>Rejoignez-nous!</h3>
+            <p>
+              <a href="#"><span class="icon-facebook rsLink"> </span></a> <!--Lien icone facebook-->
+              &nbsp;&nbsp;
+              <a href="#"><span class="icon-twitter rsLink"> </span></a> <!--Lien icone facebook-->
+              &nbsp;&nbsp;
+              <a href="#"><span class="icon-google rsLink"> </span></a> <!--Lien icone facebook-->
+            </p>
+          </div><!--Fin col-sm-2-->
+        </div>
+        <div class="row"> <!-- Ligne contenant le menu avec les colonnes -->
+          <div class="col-sm-1"></div> <!--Colonne vide pour centrer les autres-->
           <div class="col-sm-2"> <!--Sport 1-->
             <h6>Sport 1</h6>
             <ul class="unstyled">
@@ -226,14 +242,6 @@
           </div><!--Fin col-sm-2-->
           <div class="col-sm-2">
             <h6>Contact</h6>
-          </div><!--Fin col-sm-2-->
-          <div class="col-sm-2">
-            <h6>Rejoignez-nous!</h6>
-            <ul class="unstyled">
-              <li><a href="#"><i class="fa fa-facebook-square"></i> &nbsp; Facebook</a></li>
-              <li><a href="#"><i class="fa fa-twitter-square"></i> &nbsp; Twitter</a></li>
-              <li><a href="#"><i class="fa fa-google-plus-square"></i> &nbsp; Google+</a></li>
-            </ul>
           </div><!--Fin col-sm-2-->
         </div><!--Fin row-->
       </div><!--Fin container-->

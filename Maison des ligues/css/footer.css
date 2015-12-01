@@ -1,9 +1,16 @@
 footer{
-	margin-top: 20px;
+	margin-top: 10px;
 	background-color: #333;
 	color : #eee;
 	font-size: 12px;
 	padding: 20px;
+}
+
+.center{
+	text-align : center;
+}
+.rsLink{
+	font-size: 2em;
 }
 
 ul.unstyled{
