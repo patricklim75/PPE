@@ -122,7 +122,7 @@
                   <li><a href="#">Services</a></li>               
                 </ul>
               </li>
-              <li class="active">
+              <li class="active"> <!-- Contact -->
                 <a href="contact.html">
                   <span class="icon-contact visible-sm-block visible-md-block">
                   </span>
@@ -139,104 +139,49 @@
 
                                             <!--      Partie Contenu       -->
     <div class="container">
-      <div class="row"> <!--Ligne contenant le formulaire + contacts-->
-        <div class="col-sm-9">
-          <div class="row" style="text-align:center">
-            <h2>Contactez-nous par mail</h2>
-            </br>
+      <div class="col-sm-9">
+        <div class="row text-center">
+          <h2>Contactez-nous par mail</h2>
+          </br>
+        </div>
+        <form class="form-horizontal col-sm-12" role="form" method="post" action="index.php">
+          <div class="form-group"> <!--Champs d'entrer du nom-->
+            <div class="col-sm-10 col-sm-offset-1">
+              <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" value="">
+            </div>
           </div>
-          <form class="form-horizontal" role="form" method="post" action="index.php">
-            <div class="form-group"> <!--Champs d'entrer du nom-->
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" value="">
-              </div>
+          <div class="form-group"> <!--Champs d'entrer du prénom-->
+            <div class="col-sm-10 col-sm-offset-1">
+              <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" value="">
             </div>
-            <div class="form-group"> <!--Champs d'entrer du prénom-->
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" value="">
-              </div>
+          </div>
+          <div class="form-group"> <!--Champs d'entrer de l'e-mail-->
+            <div class="col-sm-10 col-sm-offset-1">
+              <input type="email" class="form-control" id="email" name="email" placeholder="exemple@domain.com" value="">
             </div>
-            <div class="form-group"> <!--Champs d'entrer de l'e-mail-->
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" name="email" placeholder="exemple@domain.com" value="">
-              </div>
+          </div>
+          <div class="form-group"> <!--Champs d'entrer du texte-->
+            <div class="col-sm-10 col-sm-offset-1">
+              <textarea class="form-control" rows="6" name="message" placeholder="Entrer votre messsage ici..."></textarea>
             </div>
-            <div class="form-group"> <!--Champs d'entrer du texte-->
-              <div class="col-sm-10">
-                <textarea class="form-control" rows="6" name="message" placeholder="Entrer votre messsage ici..."></textarea>
-              </div>
+          </div>
+          <div class="form-group"> <!-- Bouton envoyer-->
+            <div class="col-sm-10 col-sm-offset-2">
+              <input id="envoyer" name="envoyer" type="submit" value="Envoyer" class="btn btn-primary">
             </div>
-            <div class="form-group"> <!-- Bouton envoyer-->
-              <div class="col-sm-10 col-sm-offset-2">
-                <input id="envoyer" name="envoyer" type="submit" value="Envoyer" class="btn btn-primary">
-              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+             <! Will be used to display an alert to the user>
             </div>
-            <div class="form-group">
-              <div class="col-sm-10 col-sm-offset-2">
-               <! Will be used to display an alert to the user>
-              </div>
-            </div>
-          </form>
-        </div> <!-- fin de col-sm-9 -->
-        <div class ="col-sm-3"> <!-- Nos coordonnées -->
-          <h3 class="center">Nos Coordonnées</h3>
-          <h4 class="sousTitre">M2L Lorraine</h4>
-          <p>
-            13 rue Jean Moulin - BP 70001
-            </br>
-            54510 TOMBLAINE
-            </br>
-            Tél. : 03.83.18.87.02
-            </br>
-            Fax : 03.83.18.87.03
-            </br>
-            Email : contact@m2l.fr
-          </p>
-          <h4 class="sousTitre">Directeur</h4>
-          <p>
-            Lucien SAPIN
-            </br>
-            Tél. : 03 83 18 87 02
-            </br>
-            Fax : 03 83 18 87 03
-            </br>
-            Email : lucien.gastaldello@m2l.fr
-          </p>
-          <h4 class="sousTitre">CHARGÉE IMPACT EMPLOI</h4>
-          <p>
-            Nathalie GENAIS
-            </br>
-            Tél. : 03 83 18 87 05
-            </br>
-            Email : martine.genoux@m2l.fr
-          </p>
-          <h4 class="sousTitre">CHARGÉE D’INFOGRAPHIE</h4>
-          <p>
-            Lorette GIROUX
-            </br>
-            Tél. : 03 83 18 87 06
-            </br>
-            Email : lorette.bossart@m2l.fr
-          </p>
-          <h4 class="sousTitre">SECRÉTAIRE COMPTABLE</h4>
-          <p>
-            Martine DUPONT  
-            </br>
-            Tél. : 03 83 18 87 07
-            </br>
-            Fax : 03 83 18 87 03
-            </br>
-            Email : jeannine.vuillemard@m2l.fr
-          </p>
-        </div> <!-- fin de col-sm-3 -->
-      </div> <!-- fin de la row -->
-      <div class="row" > <!-- début de la géolocalisation -->
-        <div id="map" style="height: 180px;"></div>
+          </div>
+        </form>
+        <div class="col-sm-12" id="map" style="height: 180px;"></div>
         <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
         <script type="text/javascript">
           function init(){
             //Creation d'un objet map avec certains params (position sur la map et zoom)
-            var map = L.map('map').setView([48.697936, 6.214196], 16);
+            var map = L.map('map',{zoomControl:false}).setView([48.697936, 6.214196], 16);
       
             // Ajout du "layer" (genre la map dessiner quoi) sur la map
             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -247,8 +192,61 @@
             var marker = L.marker([48.697936, 6.214196]).addTo(map);
           }
         </script>
-      </div> <!-- fin de la deuxième ligne -->
-    </div> <!-- fin de container -->
+      </div> <!-- fin de col-sm-9 -->
+
+      <div class ="col-sm-3"> <!-- Nos coordonnées -->
+        <h2 class="center">Nos Coordonnées</h2>
+        <h4 class="sousTitre">M2L Lorraine</h4>
+        <p>
+          13 rue Jean Moulin - BP 70001
+          </br>
+          54510 TOMBLAINE
+          </br>
+          Tél. : 03.83.18.87.02
+          </br>
+          Fax : 03.83.18.87.03
+          </br>
+          Email : contact@m2l.fr
+        </p>
+        <h4 class="sousTitre">Directeur</h4>
+        <p>
+          Lucien SAPIN
+          </br>
+          Tél. : 03 83 18 87 02
+          </br>
+          Fax : 03 83 18 87 03
+          </br>
+          Email : lucien.gastaldello@m2l.fr
+        </p>
+        <h4 class="sousTitre">CHARGÉE IMPACT EMPLOI</h4>
+        <p>
+          Nathalie GENAIS
+          </br>
+          Tél. : 03 83 18 87 05
+          </br>
+          Email : martine.genoux@m2l.fr
+        </p>
+        <h4 class="sousTitre">CHARGÉE D’INFOGRAPHIE</h4>
+        <p>
+          Lorette GIROUX
+          </br>
+          Tél. : 03 83 18 87 06
+          </br>
+          Email : lorette.bossart@m2l.fr
+        </p>
+        <h4 class="sousTitre">SECRÉTAIRE COMPTABLE</h4>
+        <p>
+          Martine DUPONT  
+          </br>
+          Tél. : 03 83 18 87 07
+          </br>
+          Fax : 03 83 18 87 03
+          </br>
+          Email : jeannine.vuillemard@m2l.fr
+        </p>
+      </div> <!-- fin de col-sm-3 -->
+    </div>
+  
                                             <!--      Partie Footer       -->
 
     <div class="row"> <!-- Ligne Réseau Sociaux -->
